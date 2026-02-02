@@ -13,5 +13,5 @@ RUN npm install -g openclaw@latest
 ENV PORT=8000
 EXPOSE 8000
 
-CMD ["openclaw", "serve"]
+CMD ["openclaw", "start"]
 
