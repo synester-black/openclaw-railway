@@ -1,0 +1,32 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you. Please fill out the form below.</p>
+
+            <%= form_with local: true do |form| %>
+                <div class="mb-3">
+                    <%= form.label :name %>
+                    <%= form.text_field :name, class: "form-control", required: true %>
+                </div>
+
+                <div class="mb-3">
+                    <%= form.label :email %>
+                    <%= form.email_field :email, class: "form-control", required: true %>
+                </div>
+
+                <div class="mb-3">
+                    <%= form.label :subject %>
+                    <%= form.text_field :subject, class: "form-control", required: true %>
+                </div>
+
+                <div class="mb-3">
+                    <%= form.label :message %>
+                    <%= form.text_area :message, class: "form-control", rows: 6, required: true %>
+                </div>
+
+                <%= form.submit "Send Message", class: "btn btn-primary" %>
+            <% end %>
+        </div>
+    </div>
+</div>
